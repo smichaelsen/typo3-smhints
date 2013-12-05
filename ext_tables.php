@@ -1,5 +1,7 @@
 <?php
 
+$_EXTCONF = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['sm_hints']);
+
 if (class_exists('t3lib_div')) {
 	// no need for a namespaced variant of this call because ::loadTCA is obsolete in newer version of TYPO3
 	/** @noinspection PhpUndefinedClassInspection */
@@ -69,6 +71,26 @@ $insertItems = array(
 	),
 );
 $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'] = array_insert_at_position($GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'], $position, $insertItems);
+
+// Backend appearance of "hint"
+$GLOBALS['TCA']['tt_content']['columns']['tx_smhints_hinttype'] = array(
+	'exclude' => 1,
+	'label' => 'LLL:EXT:sm_hints/Resources/Private/Language/locallang_db.xml:tt_content.tx_smhints_hinttype',
+	'config' => array(
+		'type' => 'select',
+		'items' => array(),
+		'foreign_table' => 'tt_content',
+		'foreign_table_where' => ' AND tt_content.CType = "tx_smhints_hinttype" AND tt_content.hidden = 0 AND tt_content.pid = ' . intval($_EXTCONF['hintSysFolder']) . ' ORDER BY tt_content.header',
+	),
+);
+$GLOBALS['TCA']['tt_content']['types']['tx_smhints_hint'] = array(
+	'showitem' => '
+		CType,
+		hidden,
+		tx_smhints_hinttype,
+		bodytext;Text;;richtext:rte_transform[flag=rte_enabled|mode=ts_css],
+	'
+);
 
 // Backend appearance of "hinttype"
 $GLOBALS['TCA']['tt_content']['columns']['tx_smhints_icon'] = array(

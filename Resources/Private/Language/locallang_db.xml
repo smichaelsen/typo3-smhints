@@ -12,6 +12,7 @@
 			<label index="tt_content.CType.tx_smhints_hinttype.altText">Alternative Icon Text</label>
 			<label index="tt_content.CType.tx_smhints_hinttype.header">Title</label>
 			<label index="tt_content.CType.tx_smhints_hinttype.titleText">Icon Title</label>
+			<label index="tt_content.tx_smhints_hinttype">Type</label>
 			<label index="tt_content.tx_smhints_icon">Icon</label>
 		</languageKey>
 		<languageKey index="de" type="array">
@@ -21,6 +22,7 @@
 			<label index="tt_content.CType.tx_smhints_hinttype.altText">Alternativer Text für Hinweissymbol</label>
 			<label index="tt_content.CType.tx_smhints_hinttype.header">Titel</label>
 			<label index="tt_content.CType.tx_smhints_hinttype.titleText">Titel für Hinweissymbol</label>
+			<label index="tt_content.tx_smhints_hinttype">Hinweistyp</label>
 			<label index="tt_content.tx_smhints_icon">Hinweissymbol</label>
 		</languageKey>
 	</data>
