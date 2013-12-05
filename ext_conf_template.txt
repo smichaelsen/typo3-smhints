@@ -1,0 +1,2 @@
+# cat=basic; type=string; label=LLL:EXT:sm_hints/Resources/Private/Language/locallang_db.xml:ext_conf.hintSysFolder
+hintSysFolder =
