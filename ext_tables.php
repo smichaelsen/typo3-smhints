@@ -92,6 +92,8 @@ $GLOBALS['TCA']['tt_content']['types']['tx_smhints_hinttype'] = array(
 		hidden,
 		header;LLL:EXT:sm_hints/Resources/Private/Language/locallang_db.xml:tt_content.CType.tx_smhints_hinttype.header,
 		tx_smhints_icon,
+		altText;LLL:EXT:sm_hints/Resources/Private/Language/locallang_db.xml:tt_content.CType.tx_smhints_hinttype.altText,
+		titleText;LLL:EXT:sm_hints/Resources/Private/Language/locallang_db.xml:tt_content.CType.tx_smhints_hinttype.titleText
 	'
 );
 
