@@ -6,7 +6,7 @@
 
 $EM_CONF['sm_hints'] = array(
 	'title' => 'Hints',
-	'description' => 'Hinweis-Inhaltselemente',
+	'description' => 'Adds a new content element "hint", which basically provides an info box containing a symbol and some text. Symbol sets are fully configurable in the backend. The is extension is developed for and used in production by Stiftung Mitarbeit, Bonn, Germany.',
 	'category' => 'fe',
 	'author' => 'Sebastian Michaelsen',
 	'author_email' => 'sebastian@app-zap.de',

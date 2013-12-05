@@ -6,7 +6,7 @@
 
 ## Description
 
-Adds a new content element "hint", which basically provides an info box containing a symbol and some text. Symbol sets are fully configurable in the backend. The is extension is develop for and used in production by Stiftung Mitarbeit, Bonn, Germany.
+Adds a new content element "hint", which basically provides an info box containing a symbol and some text. Symbol sets are fully configurable in the backend. The is extension is developed for and used in production by Stiftung Mitarbeit, Bonn, Germany.
 
 ## Requirements
 
