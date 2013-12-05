@@ -1,4 +1,4 @@
-### TYPO3 Extension: Hints
+## TYPO3 Extension: Hints
 
 * Extension Key: sm_hints
 * Extension Author: Sebastian Michaelsen <sebastian@app-zap.de>
