@@ -51,7 +51,7 @@ $dividersPositions = get_dividers_positions($GLOBALS['TCA']['tt_content']['colum
 $position = intval($dividersPositions[1]); // before the 2nd divider
 $insertItems = array(
 	array(
-		'Hinweis',
+		'LLL:EXT:sm_hints/Resources/Private/Language/locallang_db.xml:tt_content.CType.tx_smhints_hint',
 		'tx_smhints_hint',
 		$resourcesPath . 'Icons/ttcontent_hint.gif',
 	),
@@ -63,11 +63,36 @@ $dividersPositions = get_dividers_positions($GLOBALS['TCA']['tt_content']['colum
 $position = intval($dividersPositions[3]) + 1; // after the 4th divider
 $insertItems = array(
 	array(
-		'Hinweistyp',
+		'LLL:EXT:sm_hints/Resources/Private/Language/locallang_db.xml:tt_content.CType.tx_smhints_hinttype',
 		'tx_smhints_hinttype',
 		$resourcesPath . 'Icons/ttcontent_hinttype.gif',
 	),
 );
 $GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'] = array_insert_at_position($GLOBALS['TCA']['tt_content']['columns']['CType']['config']['items'], $position, $insertItems);
+
+// Backend appearance of "hinttype"
+$GLOBALS['TCA']['tt_content']['columns']['tx_smhints_icon'] = array(
+	'exclude' => 1,
+	'label' => 'LLL:EXT:sm_hints/Resources/Private/Language/locallang_db.xml:tt_content.tx_smhints_icon',
+	'config' => array(
+		'type' => 'group',
+		'internal_type' => 'file',
+		'allowed' => $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'],
+		'max_size' => $GLOBALS['TYPO3_CONF_VARS']['BE']['maxFileSize'],
+		'uploadfolder' => 'uploads/pics',
+		'show_thumbs' => '1',
+		'size' => '1',
+		'maxitems' => '1',
+		'minitems' => '0',
+	),
+);
+$GLOBALS['TCA']['tt_content']['types']['tx_smhints_hinttype'] = array(
+	'showitem' => '
+		CType,
+		hidden,
+		header;LLL:EXT:sm_hints/Resources/Private/Language/locallang_db.xml:tt_content.CType.tx_smhints_hinttype.header,
+		tx_smhints_icon,
+	'
+);
 
 ?>
