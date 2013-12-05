@@ -1,0 +1,2 @@
+# cat=sm_hints/links/1; type=int+; label=LLL:EXT:sm_hints/Resources/Private/Language/locallang_db.xml:ext_conf.hintSysFolder
+plugin.tx_smhints.hintSysFolder =

@@ -1,0 +1,30 @@
+tt_content {
+	tx_smhints_hint = FLUIDTEMPLATE
+	tx_smhints_hint {
+		file = EXT:sm_hints/Resources/Private/Templates/Hint.html
+		variables {
+			icon = CONTENT
+			icon {
+				table = tt_content
+				select {
+					where = CType = tx_smhints_hinttype
+					andWhere = uid = {field:tx_smhints_hinttype}
+					andWhere.insertData = 1
+					pidInList = {$plugin.tx_smhints.hintSysFolder}
+				}
+				renderObj = TEXT
+				renderObj.field = tx_smhints_icon
+			}
+			iconAlt < .icon
+			iconAlt.renderObj.field = altText
+			iconTitle < .icon
+			iconTitle.renderObj.field = titleText
+			content = TEXT
+			content.field = bodytext
+		}
+	}
+
+	tx_smhints_hinttype = TEXT
+	tx_smhints_hinttype.value = <!-- Fehler: Dieses Inhaltselement (uid: {field:uid}) ist ein Hinweistyp und soll nicht auf einer Inhaltsseite platziert werden! -->
+	tx_smhints_hinttype.insertData = 1
+}

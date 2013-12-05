@@ -119,4 +119,16 @@ $GLOBALS['TCA']['tt_content']['types']['tx_smhints_hinttype'] = array(
 	'
 );
 
+/**
+ * Typoscript
+ */
+if (class_exists('t3lib_extMgm')) {
+	/** @noinspection PhpUndefinedClassInspection */
+	t3lib_extMgm::addStaticFile('sm_hints', 'Configuration/Typoscript/', 'Hints');
+} else {
+	/** @noinspection PhpUndefinedClassInspection */
+	/** @noinspection PhpUndefinedNamespaceInspection */
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('sm_hints', 'Configuration/Typoscript/', 'Hints');
+}
+
 ?>
