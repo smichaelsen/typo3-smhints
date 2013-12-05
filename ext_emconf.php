@@ -7,7 +7,7 @@
 $EM_CONF['sm_hints'] = array(
 	'title' => 'Hints',
 	'description' => 'Hinweis-Inhaltselemente',
-	'category' => 'frontend',
+	'category' => 'fe',
 	'author' => 'Sebastian Michaelsen',
 	'author_email' => 'sebastian@app-zap.de',
 	'state' => 'stable',
