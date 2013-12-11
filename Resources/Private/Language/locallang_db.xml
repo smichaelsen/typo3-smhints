@@ -7,6 +7,7 @@
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="ext_conf.hintSysFolder">Sysfolder for hint types</label>
+			<label index="ext_conf.includeDefaultCSS">Include Default CSS</label>
 			<label index="tt_content.CType.tx_smhints_hint">Hint</label>
 			<label index="tt_content.CType.tx_smhints_hinttype">Hint Type</label>
 			<label index="tt_content.CType.tx_smhints_hinttype.altText">Alternative Icon Text</label>
@@ -17,6 +18,7 @@
 		</languageKey>
 		<languageKey index="de" type="array">
 			<label index="ext_conf.hintSysFolder">Sysfolder für Hinweistypen:In diesem Sysfolder werden die Hinweistypen angelegt (Seiten-ID)</label>
+			<label index="ext_conf.includeDefaultCSS">Standard CSS einbinden</label>
 			<label index="tt_content.CType.tx_smhints_hint">Hinweis</label>
 			<label index="tt_content.CType.tx_smhints_hinttype">Hinweistyp</label>
 			<label index="tt_content.CType.tx_smhints_hinttype.altText">Alternativer Text für Hinweissymbol</label>

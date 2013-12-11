@@ -1,2 +1,6 @@
-# cat=sm_hints/links/1; type=int+; label=LLL:EXT:sm_hints/Resources/Private/Language/locallang_db.xml:ext_conf.hintSysFolder
-plugin.tx_smhints.hintSysFolder =
+plugin.tx_smhints {
+	# cat=sm_hints/links/1; type=int+; label=LLL:EXT:sm_hints/Resources/Private/Language/locallang_db.xml:ext_conf.hintSysFolder
+	hintSysFolder =
+	# cat=sm_hints/enable/1; type=boolean; label=LLL:EXT:sm_hints/Resources/Private/Language/locallang_db.xml:ext_conf.includeDefaultCSS
+	includeDefaultCSS = 1
+}
