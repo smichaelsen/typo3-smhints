@@ -1,0 +1,22 @@
+.hints {
+	background: none repeat scroll 0 0 #DCE5EF;
+	border-radius: 6px;
+	clear: both;
+	margin-bottom: 20px;
+	padding: 3%;
+	position: relative;
+	width: 94%;
+}
+.hints .hint {
+	left: 15px;
+	position: absolute;
+	top: 15px;
+	width: 40px;
+}
+.hints .hint_text {
+	padding-left: 50px;
+}
+.hints .hint_text p {
+	margin: 0;
+	padding: 0 0 3px;
+}

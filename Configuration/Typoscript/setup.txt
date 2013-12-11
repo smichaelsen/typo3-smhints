@@ -28,3 +28,6 @@ tt_content {
 	tx_smhints_hinttype.value = <!-- Fehler: Dieses Inhaltselement (uid: {field:uid}) ist ein Hinweistyp und soll nicht auf einer Inhaltsseite platziert werden! -->
 	tx_smhints_hinttype.insertData = 1
 }
+[globalVar = LIT:1 = {$plugin.tx_smhints.includeDefaultCSS}]
+page.includeCSS.tx_smhints = EXT:sm_hints/Resources/Public/Stylesheets/smhints.css
+[global]
