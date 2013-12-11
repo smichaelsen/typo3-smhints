@@ -134,8 +134,6 @@ if (class_exists('t3lib_SpriteManager')) {
 	/** @noinspection PhpUndefinedNamespaceInspection */
 	\TYPO3\CMS\Backend\Sprite\SpriteManager::addSingleIcons($icons, 'sm_hints');
 }
-$GLOBALS['TCA']['tt_content']['ctrl']['typeicons']['tx_smhints_hint'] = $resourcesPath . 'Icons/ttcontent_hint.gif';
-$GLOBALS['TCA']['tt_content']['ctrl']['typeicons']['tx_smhints_hintype'] = $resourcesPath . 'Icons/ttcontent_hinttype.gif';
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['tx_smhints_hint'] = 'extensions-sm_hints-tx_smhints_hint';
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['tx_smhints_hinttype'] = 'extensions-sm_hints-tx_smhints_hinttype';
 
