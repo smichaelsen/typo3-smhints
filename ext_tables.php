@@ -46,6 +46,21 @@ if (class_exists('t3lib_extMgm')) {
 }
 
 
+// Use bodytext as label for SM-Hints items. Otherwise try header first.
+if(!function_exists('tx_smhints_content_label')) {
+	function tx_smhints_content_label(&$parameters, $pObj) {
+		if($parameters['row']['CType'] == 'tx_smhints_hint') {
+			$parameters['title'] = $parameters['row']['bodytext'];
+			return;
+		}
+
+		$parameters['title'] = $parameters['row']['header'] ?: $parameters['row']['bodytext'] ;
+	}
+}
+
+$GLOBALS['TCA']['tt_content']['ctrl']['label_userFunc'] = 'tx_smhints_content_label';
+
+
 
 
 // insert CE type "hint"
