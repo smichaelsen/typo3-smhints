@@ -24,6 +24,45 @@ tt_content {
 		}
 	}
 
+	# Problem has something to do with FLUIDTEMPLATE. Using wraps and a COA, we work-around using FLUIDTEMPLATE.
+	tx_smhints_hint >
+	tx_smhints_hint = COA
+	tx_smhints_hint {
+		10 = CONTENT
+		10 {
+			table = tt_content
+			select {
+				where = CType = tx_smhints_hinttype
+				andWhere = uid = {field:tx_smhints_hinttype}
+				andWhere.insertData = 1
+				pidInList = {$plugin.tx_smhints.hintSysFolder}
+			}
+
+			renderObj = IMAGE
+			renderObj {
+				file {
+					import = uploads/pics/
+					import.field = tx_smhints_icon
+					import.listNum = 0
+
+					altText.field = altText
+					titleText.field = titleText
+				}
+
+				wrap = <div class="hint"> | </div>
+			}
+		}
+
+		20 = TEXT
+		20 {
+			field = bodytext
+			parseFunc =< lib.parseFunc_RTE
+			wrap = <div class="hint_text"> | </div>
+		}
+
+		wrap = <div class="hints"> | <div class="clear"></div></div>
+	}
+
 	tx_smhints_hinttype = TEXT
 	tx_smhints_hinttype.value = <!-- Fehler: Dieses Inhaltselement (uid: {field:uid}) ist ein Hinweistyp und soll nicht auf einer Inhaltsseite platziert werden! -->
 	tx_smhints_hinttype.insertData = 1
